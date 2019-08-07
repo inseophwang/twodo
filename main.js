@@ -30,15 +30,40 @@ function printToDo(todo){
   makeUl.appendChild(makeLi);
 }
 
+function printEveryTodo(){
+  for(let i = 0; i < todos.length; i++){
+    printToDo([0])
+  }
+}
+
+function addingTodo(){
+  todos.push()
+}
+
+function removingTodo() {
+  todos.splice()
+}
+
+
+
 const addButton = document.querySelector('.add-todo');
-
-const markButton = document.querySelector('.mark-todo-complete');
-
-const deleteButton = document.querySelector('.delete-completed-todos');
 
 addButton.addEventListener('click', funcAdd)
 
-
 function funcAdd(){
- 
+  const todoInput = document.querySelector('.todo-input');
+
+  const todoText = todoInput.value;
+
+  addingTodo();
+
+  printToDo();
 }
+
+
+
+// const markButton = document.querySelector('.mark-todo-complete');
+
+// const deleteButton = document.querySelector('.delete-completed-todos');
+
+
