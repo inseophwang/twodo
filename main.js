@@ -20,3 +20,25 @@ let todos = [
   [`Add dates to todos.`, false],
 ]
 
+function printToDo(todo){
+  const makeLi = document.createElement('li');
+
+  const makeUl = document.querySelector('.todo-list');
+
+  makeLi.innerText = todo;
+
+  makeUl.appendChild(makeLi);
+}
+
+const addButton = document.querySelector('.add-todo');
+
+const markButton = document.querySelector('.mark-todo-complete');
+
+const deleteButton = document.querySelector('.delete-completed-todos');
+
+addButton.addEventListener('click', funcAdd)
+
+
+function funcAdd(){
+ 
+}
