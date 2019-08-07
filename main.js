@@ -32,16 +32,16 @@ function printToDo(todo){
 
 function printEveryTodo(){
   for(let i = 0; i < todos.length; i++){
-    printToDo([0])
+    printToDo(todos[i])
   }
 }
 
-function addingTodo(){
-  todos.push()
+function addingTodo(todoName){
+  todos.push([todoName, false])
 }
 
-function removingTodo() {
-  todos.splice()
+function removingTodo(i) {
+  todos.splice(i, 1)
 }
 
 
@@ -55,12 +55,18 @@ function funcAdd(){
 
   const todoText = todoInput.value;
 
-  addingTodo();
+  addingTodo(todoText);
 
-  printToDo();
+  printToDo(todoText);
 }
 
+function markData(index){
+  todos[index] = true;
+}
 
+function markDone(number) {
+  const ol = document.querySelector('.todo-list')
+}
 
 // const markButton = document.querySelector('.mark-todo-complete');
 
